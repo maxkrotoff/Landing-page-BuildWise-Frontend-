@@ -1,0 +1,407 @@
+/* ===== GLOBAL ===== */
+
+body {
+  font-family: Outfit, sans-serif;
+}
+
+/* ===== GLOBAL BUTTON STYLES ===== */
+
+[class*="__button"]:hover {
+  background-color: #0C3D54;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #FFF;
+
+}
+
+.header__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+
+.header__logo_img {
+  display: block;
+  height: auto;
+  width: 152px;
+  height: 24px;
+}
+
+/* ===== NAVIGATION ===== */
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu_link {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  color: #052838;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header__menu_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+  background-color: #052838;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.header__menu_link:hover::after {
+  transform: scaleX(1);
+}
+
+.header__menu_link:hover {
+  color: #052838;
+}
+
+/* активный пункт */
+.header__menu_link_active {
+  color: #052838;
+  font-weight: 600;
+}
+
+.header__menu_link_active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+  background-color: #052838;
+  transform: scaleX(1);
+}
+
+/* ===== ACTIONS (кнопка справа) ===== */
+
+.header__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #052838;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.header__button_text {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.header__button_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 120px;
+
+}
+
+.hero__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero__content {
+  max-width: 650px;
+  flex: 0 0 auto;
+}
+
+.hero__title {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #052838;
+  margin: 0 0 24px 0;
+}
+
+.hero__description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+.hero__button {
+  display: inline-block;
+  text-decoration: none;
+  background: #052838;
+  color: #FFF;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero__image {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 120px;
+}
+
+.about__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.about__content {
+  max-width: 500px;
+  flex: 0 0 auto;
+}
+
+.about__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #052838;
+  margin: 0 0 24px 0;
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.about__button {
+  display: inline-block;
+  text-decoration: none;
+  background: #052838;
+  color: #FFF;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 16px;
+}
+
+.about__image {
+  flex: 1;
+  min-width: 0;
+}
+
+.about__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+
+.portfolio {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 120px;
+}
+
+.portfolio__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.portfolio__header {
+  margin-bottom: 60px;
+}
+
+.portfolio__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #052838;
+  margin: 0 0 24px 0;
+}
+
+.portfolio__description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  max-width: 550px;
+}
+
+.portfolio__slider {
+
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Brand-Primary, #052838);
+}
+
+
+.portfolio__arrow_prev {
+    left: -32px;
+    right: auto;
+    z-index: 10;
+}
+
+.portfolio__arrow_next {
+    right: -32px;
+    left: auto;
+    z-index: 10;
+}
+
+.portfolio__arrow:hover {
+  background-color: #0C3D54;
+}
+
+.portfolio__cards {
+  
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.portfolio__card {
+  flex: 0 0 calc(33.333% - 16px);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #052838;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio__card:hover {
+  transform: translateY(-8px);
+}
+
+.portfolio__card-image {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.portfolio__card-content {
+  padding: 24px;
+  background: #052838;
+  color: #FFF;
+}
+
+.portfolio__card-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #FFF;
+  margin: 0 0 12px 0;
+}
+
+.portfolio__card-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #CCC;
+  margin: 0;
+}
+
+.portfolio__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio__pagination {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.portfolio__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: #052838;
+  color: #FFF;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio__button:hover {
+  background-color: #0C3D54;
+}
