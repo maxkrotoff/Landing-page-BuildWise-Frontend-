@@ -682,6 +682,18 @@ body {
     gap: 24px;
 }
 
+@media (max-width: 1024px) {
+    .credentials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .credentials__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* CARD */
 
 .credentials__card {
@@ -760,4 +772,296 @@ body {
     font-size: 16px;
     font-weight: 600;
     transition: background-color 0.3s ease;
+}
+
+/* ===== FAQ SECTION ===== */
+/* ===== FAQ SECTION ===== */
+.faq {
+    width: 100%;
+    padding: 120px 0; /* Matches other section spacing */
+    background-color: #FFF; /* Changed: was #F8F9FA */
+}
+
+.faq__container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px; /* Space between title and accordion */
+}
+
+.faq__heading {
+    flex: 0 0 35%; /* Left column width */
+}
+
+.faq__title {
+    font-size: clamp(40px, 5vw, 64px); /* Matches other h2 sizes */
+    font-weight: 700;
+    line-height: 1.1;
+    color: #052838; /* Your brand primary */
+    margin: 0;
+}
+
+.faq__accordion {
+    flex: 1; /* Right column takes remaining space */
+    max-width: 100%;
+}
+
+.faq__item {
+    border-bottom: 1px solid #E5E7EB; /* Divider line like preview */
+}
+
+.faq__item:last-child {
+    border-bottom: none;
+}
+
+.faq__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0; /* Vertical padding only, no card */
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+    transition: none;
+}
+
+.faq__question-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #052838;
+    line-height: 1.4;
+    padding-right: 24px;
+}
+
+.faq__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #F3F4F6; /* Light circle bg like preview */
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq__item_active .faq__icon {
+    transform: rotate(180deg);
+}
+
+.faq__question:hover .faq__icon {
+    background-color: #E5E7EB;
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq__item_active .faq__answer {
+    max-height: 300px;
+    padding-bottom: 24px;
+}
+
+.faq__answer-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4B5563; /* Softer gray for body text */
+    margin: 0;
+    padding-right: 56px; /* Align with question text, accounting for icon */
+}
+
+/* ===== FAQ RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .faq__container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .faq__heading {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .faq__title br {
+        display: none; /* Remove line break on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 60px 0;
+    }
+    
+    .faq__question-text {
+        font-size: 24px;
+        padding: 32px;
+    }
+    
+    .faq__answer-text {
+        padding-right: 0;
+    }
+}
+
+/* ===== CTA SECTION ===== */
+
+.cta {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 120px; /* Matches other sections */
+}
+
+.cta__container {
+    max-width: 1320px; /* Same as all other sections */
+    margin: 0 auto;
+    padding: 0 15px; /* Same container padding */
+}
+
+.cta__card {
+    background-color: #052838; /* Your brand primary */
+    border-radius: 24px; /* Larger radius like in preview */
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.cta__content {
+    flex: 1;
+    max-width: 550px; /* Matches portfolio__description */
+}
+
+.cta__title {
+    font-size: clamp(36px, 5vw, 56px); /* Slightly smaller than 64px h2s to fit card */
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFF;
+    margin: 0 0 20px 0;
+}
+
+.cta__description {
+    font-size: 16px; /* Matches portfolio__description */
+    line-height: 1.6;
+    color: #CCC;
+    margin: 0 0 16px 0;
+}
+
+.cta__description:last-of-type {
+    margin-bottom: 32px;
+}
+
+.cta__form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.cta__input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 1px solid  #375360;
+    border-radius: 8px; /* Same as all your buttons */
+    background: #052838;
+    color: #FFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.cta__input::placeholder {
+    color: #999EAD;
+}
+
+.cta__input:focus {
+    border-color: #FFF;
+    background: rgba(255, 255, 0.15);
+}
+
+.cta__button {
+    padding: 14px 32px; /* Exact match to .hero__button */
+    background-color: #FFF;
+    color: #052838;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cta__button:hover {
+    background-color: #F8F9FA;
+    transform: translateY(-2px);
+}
+
+.cta__disclaimer {
+    font-size: 12px;
+    line-height: 1.4;
+    color:  #999EAD;
+    margin: 0;
+}
+
+.cta__image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.cta__img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Inner radius, slightly smaller than card */
+    display: block;
+}
+
+/* ===== CTA RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .cta__card {
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .cta__content {
+        max-width: 100%;
+    }
+    
+    .cta__form {
+        justify-content: center;
+    }
+    
+    .cta__image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta {
+        margin-bottom: 60px;
+    }
+    
+    .cta__card {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+    
+    .cta__form {
+        flex-direction: column;
+    }
+    
+    .cta__button {
+        width: 100%;
+    }
 }
