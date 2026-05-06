@@ -17,7 +17,8 @@ body {
     padding: 20px 0;
     background-color: #FFF;
     position: relative;
-  z-index: 3;
+     z-index: 3; */
+
 }
 
 .header__container {
@@ -136,12 +137,19 @@ body {
     padding: 0;
     margin-bottom: 120px;
     position: relative;
-    overflow: hidden; /* 👈 КЛЮЧ */
+    overflow: hidden; 
+
+     /*    min-height: 1020px;
+        padding-top: 84px;
+        background-image: url("/images/hero-pic.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top; */
 
 }
 
 .hero__container {
-    max-width: 1320px;
+   max-width: 1320px;
     min-height: 500px;
     margin: 0 auto;
     padding: 0 15px;
@@ -150,6 +158,7 @@ body {
     justify-content: space-between;
     gap: 60px;
     position: relative;
+
 }
 
 .hero__content {
@@ -1110,7 +1119,7 @@ body {
     }
 }
 
-/* ===== FOOTER ===== */
+
 /* ===== FOOTER ===== */
 .footer {
     width: 100%;
@@ -1172,7 +1181,7 @@ body {
 .footer__nav {
     width: 546px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, max-content);
     grid-auto-flow: row; /* 👈 ВОТ ЭТО ГЛАВНОЕ */
     gap: 24px 86px;
 }
