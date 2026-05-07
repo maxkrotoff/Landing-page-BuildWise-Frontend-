@@ -1,4 +1,8 @@
 /* ===== GLOBAL ===== */
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     font-family: Outfit, sans-serif;
