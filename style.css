@@ -354,11 +354,10 @@ body {
 }
 
 .portfolio__cards {
-
     display: flex;
     gap: 24px;
-    flex: 1;
-    overflow: hidden;
+    transition: transform 0.6s ease;
+    will-change: transform;
 }
 
 .portfolio__card {
@@ -410,6 +409,11 @@ body {
     gap: 16px;
 }
 
+.portfolio__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
 /* ----- PAGINATION ----- */
 
 .portfolio__pagination {
@@ -440,14 +444,20 @@ body {
 }
 
 .portfolio__pagination-segment {
-    display: block;
-    width: 50%;
-    height: 2px;
-    background: #D7DAE2;
+    
+    width: 48px;
+    height: 4px;
+
+    background: #D9D9D9;
+    border-radius: 999px;
+
+    transition:background-color 0.3s ease, transform 0.3s ease;
+
 }
 
 .portfolio__pagination-segment_active {
-    background: var(--Brand-Primary, #052838);
+    background: #052838;
+    transform: scaleX(1.1);
 }
 
 /* ---------- */
@@ -685,11 +695,10 @@ body {
 }
 
 .partners__cards {
-
     display: flex;
     gap: 24px;
-    flex: 1;
-    overflow: hidden;
+    transition: transform 0.6s ease;
+    will-change: transform;
 }
 
 .partners__card {
@@ -776,14 +785,16 @@ body {
 }
 
 .partners__pagination-segment {
-    display: block;
-    width: 50%;
-    height: 2px;
-    background: #D7DAE2;
+    width: 48px;
+    height: 4px;
+    background: #D9D9D9;
+    border-radius: 999px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .partners__pagination-segment_active {
-    background: var(--Brand-Primary, #052838);
+    background: #052838;
+    transform: scaleX(1.1);
 }
 
 /* ---------- */
@@ -807,7 +818,10 @@ body {
     background-color: #0C3D54;
 }
 
-
+.partners__viewport {
+    overflow: hidden;
+    width: 100%;
+}
 
 /* ===== FAQ SECTION ===== */
 .faq {
@@ -1042,7 +1056,7 @@ body {
 
 .cta__input:focus {
     border-color: #FFF;
-    background: rgba(255, 255, 0.15);
+    background: #052838;
 }
 
 .cta__button {
@@ -1136,7 +1150,7 @@ body {
 
 .footer__container {
     max-width: 1680px;
-    margin: 0 auto;
+    margin: 100px 0 auto;
     padding: 0 15px;
     display: flex;
     justify-content: space-between;
