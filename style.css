@@ -18,7 +18,7 @@ body {
 
     position: relative;
     z-index: 3;
-    */
+    
 }
 
 .header__container {
@@ -167,8 +167,7 @@ body {
 
 .hero__content {
     max-width: 650px;
-    padding-top: 
-    flex: 0 0 auto;
+    /* padding-top: flex: 0 0 auto; */
     position: relative;
     z-index: 2;
 }
@@ -200,23 +199,22 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.hero__image {
+/* .hero__image {
     position: absolute;
     right: 0;
     top: -80px;
-    /* регулируешь при необходимости */
+    /* регулируешь при необходимости
     z-index: 1;
 
     width: 50%;
     height: calc(100% + 80px);
 }
 
-
 .hero__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
+    object-fit: cover; 
+}*/
 
 /* ===== ABOUT SECTION ===== */
 
