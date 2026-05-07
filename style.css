@@ -552,6 +552,12 @@ body {
     min-height: 180px;
 }
 
+
+.credentials__card:hover {
+    color: #FFF;
+    background-color: #0C3D54;
+}
+
 .credentials__card_title {
     font-size: 20px;
     font-weight: 600;
